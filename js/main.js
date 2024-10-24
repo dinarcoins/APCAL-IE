@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 bannerDivBottomContainer.innerHTML = bannerDivBottomList
   .map((item) => {
     return `
-      <div class="df aic w1-xs">
+      <div class="df aic col-xs-6 mb15">
         <i class="${item.icon} fs4 fs2-md colorGrapeColor"></i>
         <div class="ml25">
           <div class="fs3 fwb fs1-md">${item.number}</div>
@@ -96,7 +96,7 @@ instructItemContainer.innerHTML = instructList
 function renderProgramNavigationTabs() {
   programNavigationTitleContainer.innerHTML = programNavigationData
     .map((tab, index) => {
-      return `<div class="tab-button cpi wfc fs2 fs09-sm" data-index="${index}">${tab.tabName}</div>`;
+      return `<div class="tab-button cpi wfc fs2 fs1-sm" data-index="${index}">${tab.tabName}</div>`;
     })
     .join("");
 

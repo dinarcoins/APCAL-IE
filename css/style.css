@@ -205,15 +205,16 @@
     background: var(--whiteColor);
     flex-direction: column;
     padding: 20px;
-    border-radius: 20px;
     position: absolute;
-    top: 10px;
+    top: 0;
     right: -100%;
     align-items: baseline;
     transition: right 0.5s ease;
+    width: 100%;
+    box-shadow: 10px 10px 10px -6px rgba(201,201,201,1);
   }
   #menu.active {
-    right: 20px;
+    right: 0;
   }
 }
 
@@ -235,5 +236,9 @@
 @media (max-width: 600px) {
   .image-item {
     flex: 1 1 calc(40% - 10px);
+  }
+
+  #bannerDivBottom {
+    position: relative;
   }
 }
