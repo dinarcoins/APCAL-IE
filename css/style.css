@@ -11,6 +11,7 @@
   --whiteColor: #fff;
   font-family: system-ui;
   --grapeColor: #6a1bbf;
+  --backColor: #000;
 }
 
 .gap50 {
@@ -19,6 +20,10 @@
 
 .gap20 {
   gap: 20px;
+}
+
+.gap10 {
+  gap: 10px;
 }
 
 .colorGrapeColor {
@@ -121,28 +126,114 @@
   padding-top: 180px;
 }
 
+.tab-button {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--whiteColor);
+  padding-bottom: 10px;
+}
+
+.tab-button.active {
+  color: var(--grapeColor);
+  border-bottom-color: var(--grapeColor);
+}
+
+.tab-button:hover {
+  border-image: linear-gradient(
+      94deg,
+      rgba(64, 14, 205, 1) 0%,
+      rgba(75, 14, 186, 1) 21%,
+      rgba(86, 14, 169, 1) 41%,
+      rgba(107, 30, 172, 1) 64%,
+      rgba(133, 56, 193, 1) 83%,
+      rgba(153, 77, 209, 1) 100%
+    )
+    1;
+  color: var(--grapeColor);
+  transition: color 0.5s ease;
+}
+
+.tab-item {
+  background: var(--whiteColor);
+  color: var(--backColor);
+  box-shadow: 5px 5px 10px 1px rgba(201, 201, 201, 1);
+}
+
+.tab-item:hover {
+  background: var(--colorGradientMain);
+  color: var(--whiteColor);
+}
+
+.hiddenDecs {
+  display: none;
+}
+
+.newItem:hover .newItemTitle {
+  color: var(--grapeColor);
+}
+
+.sponsorshipItem.show {
+  display: flex;
+}
+
+.menuNavItem {
+  border-bottom: transparent 1px solid;
+}
+
+.menuNavItem:hover {
+  color: var(--grapeColor);
+  border-bottom: var(--grapeColor) 1px solid;
+}
+
+@media screen and (max-width: 1200px) {
+  #instructItem {
+    gap: 10px;
+  }
+  .bannerHeader {
+    padding-bottom: 20%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .openMenu,
   .closeMenu {
     display: block;
   }
+
+  #menu {
+    flex-direction: column;
+    background: var(--whiteColor);
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    top: 10px;
+    right: -100%;
+    align-items: baseline;
+    transition: right 0.5s ease;
+  }
+  #menu.active {
+    right: 20px;
+  }
 }
 
 .image-item {
   flex: 1 1 calc((100% / 3) - 50px);
-  box-sizing: border-box;
 }
 
-/* Responsive cho màn hình nhỏ hơn 992px */
 @media (max-width: 992px) {
   .image-item {
-    flex: 1 1 calc(50% - 10px); /* Mỗi ảnh chiếm 50% chiều rộng */
+    flex: 1 1 calc(25% - 10px);
   }
+
+  #imageSpeakerContent {
+    gap: 10px;
+  }
+
 }
 
-/* Responsive cho màn hình nhỏ hơn 600px */
 @media (max-width: 600px) {
   .image-item {
-    flex: 1 1 calc(100% - 10px); /* Mỗi ảnh chiếm 100% chiều rộng */
+    flex: 1 1 calc(40% - 10px);
   }
 }

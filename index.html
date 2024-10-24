@@ -18,16 +18,22 @@
 
   <body>
     <header class="header w1 pf h60 aic df z5 t0 l0 bgt">
-      <div class="container">
-        <div class="df jcsb aic">
+      <div class="container pl5 pr5 w1">
+        <div class="df jcsb aic w1">
           <div class="fwb fs2">logo</div>
-          <div class="openMenu"><i class="fa-solid fa-bars"></i></div>
-          <nav id="navMenu" class="df aic fs13p fwb gap50">
-            <div class="closeMenu"><i class="fa-solid fa-x"></i></div>
-            <div id="menu" class="df aic gap50"></div>
+          <div class="openMenu cpi"><i class="fa-solid fa-bars fs2"></i></div>
+          <nav id="menu" class="df aic fs13p fwb gap50">
+            <div class="closeMenu cpi"><i class="fa-solid fa-x fs2"></i></div>
+            <a href="#introduce" class="menuNavItem">Giới thiệu hội thảo</a>
+            <a href="#speaker" class="menuNavItem">Diễn giả tham gia</a>
+            <a href="#instruct" class="menuNavItem">Hướng dẫn gửi Tham luận</a>
+            <a href="#seminarProgram" class="menuNavItem"
+              >Chương trình hội thảo</a
+            >
+            <a href="#news" class="menuNavItem">Tin tức - Sự kiện</a>
             <a
               href="#"
-              class="db buttonCustomWithoutBorder bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc"
+              class="db buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc"
             >
               Đăng nhập
             </a>
@@ -35,18 +41,18 @@
         </div>
       </div>
     </header>
-    <section class="bannerHeader pr pt60 pb51">
-      <div class="container">
-        <div class="df pt60 jcsb">
-          <div class="w49">
-            <div class="fwb ttu cb fs2 fs12-xs lh25">
+    <section class="bannerHeader pr pt60 pb61">
+      <div class="container pl5 pr5">
+        <div class="df pt60 jcsb fww">
+          <div class="w49 w1-md">
+            <div class="fwb ttu cb fs2 fs12-md lh25">
               hội thảo khoa học quốc tế
             </div>
-            <div class="ttu fwb fs15 colorGrapeColor lh25">
+            <div class="ttu fwb fs15 fs1-md  colorGrapeColor lh25">
               "ngôn ngữ học ứng dụng - xu hướng chuyển đổi trong khu vực châu á
               - thái bình dương "
             </div>
-            <div class="fs1 ttc lh25">
+            <div class="fs1 ttc lh25 fs09-md">
               kết nối nhà nghiên cứu khu vực châu á - thái bình dương chia sẻ
               kinh nghiệm nghiên cứu và giảng dạy lĩnh vực ngôn ngữ học ứng dụng
             </div>
@@ -63,10 +69,10 @@
               >
             </div>
           </div>
-          <div class="w45">
-            <!-- <img src="./imgs/bgBanner.jpg" alt="logo1">
-            <img src="./imgs/bgBanner.jpg" alt="logo1">
-            <img src="./imgs/bgBanner.jpg" alt="logo1"> -->
+          <div class="w45 pr dn-md-">
+            <img src="./imgs/bgBanner.jpg" alt="logo1" class="pa t0 r0 z3 w50 brtl25 brtr25 brbl25">
+            <img src="./imgs/bgBanner.jpg" alt="logo1"class="pa t20 l0 z1 w70 brtl25 brtr25 brbl25">
+            <img src="./imgs/bgBanner.jpg" alt="logo1"class="pa b0 r0 z0 w40 brtl25 brtr25 brbl25">
           </div>
         </div>
       </div>
@@ -74,20 +80,20 @@
     <section class="bgGradient pr pb60" id="introduce">
       <div
         id="bannerDivBottom"
-        class="container pa t0 l50 tt df z2 bgcf bra50p w1 jcsb aic pl50 pt50 pb50 pr50"
+        class="container pl5 pr5 pa t0 l50 tt df z2 bgcf bra50p w1 jcsb aic pl50 pt50 pb50 pr50 fww "
       ></div>
-      <div class="container">
+      <div class="container pl5 pr5">
         <div class="tac cf mb25">
           <div class="fwb ttu fs2 fs1-sm">Giới thiệu hội thảo</div>
           <div class="ttu fs1 fs09-md lh25">Tổng quan về hội thảo</div>
         </div>
-        <div class="df jcsb aic">
+        <div class="df jcsb aic fww">
           <img
             src="./imgs/introduce1.webp"
             alt="introduce"
             class="w45 w1-xs brtl30 brtr30 brbl30"
           />
-          <div class="w40 w1-xs cf lh16 fs13">
+          <div class="w40 w1-xs cf lh16 fs13 fs09-md">
             Nhằm kết nối các nhà nghiên cứu lĩnh vực Ngôn ngữ học ứng dụng trong
             nước và khu vực Châu Á - Thái Bình Dương, Trường đại học Hà Nội phối
             hợp với Hiệp hội ngôn ngữ học ứng dụng Australia (ALAA) tổ chức hội
@@ -98,7 +104,7 @@
       </div>
     </section>
     <section class="pt60 pb60" id="speaker">
-      <div class="container">
+      <div class="container pl5 pr5">
         <div class="df jcc fww">
           <div class="tac cf mb25">
             <div class="fwb ttu fs2 fs1-sm colorGrapeColor">
@@ -106,7 +112,8 @@
             </div>
             <div class="ttu fs1 fs09-md lh25 c0">Tổng quan về hội thảo</div>
           </div>
-          <div id="imageSpeakerContainer" class="gap50 df fww"></div>
+          <div id="imageSpeakerContent" class="pl5 pr5 gap50 df fww">
+          </div>
           <a
             href="#"
             target="_blank"
@@ -117,26 +124,109 @@
         </div>
       </div>
     </section>
-    <section class="bgGradient pr pb60 pt60" id="instruct">
-      <div class="container">
+    <section class="bgGradient pr pb50 pt60" id="instruct">
+      <div class="container pl5 pr5">
         <div class="tac cf mb25">
           <div class="fwb ttu fs2 fs1-sm">Hướng dẫn gửi tham luận</div>
           <div class="ttu fs1 fs09-md lh25">
             Hướng dẫn gửi tham luận hội thảo
           </div>
         </div>
-        <div class="df jcsb aic"></div>
+        <div id="instructItem" class="df jcsb aic gap50 fww"></div>
+      </div>
+    </section>
+    <section id="seminarProgram" class="pt60 pb50">
+      <div class="container pl5 pr5">
+        <div class="tac cf mb50">
+          <div class="fwb ttu fs2 fs1-sm c0">Chương trình hội thảo</div>
+          <div class="ttu fs1 fs09-md lh25 c0">
+            Chương trình làm việc của hội thảo
+          </div>
+        </div>
+        <div class="">
+          <div
+            id="programNavigationTitle"
+            class="tab-buttons df jcsa aic mb50"
+          ></div>
+          <div id="programNavigationTab" class="tab-content df fww"></div>
+          <a
+            href="#"
+            class="buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db"
+          >
+            Xem thêm
+          </a>
+        </div>
+      </div>
+    </section>
+    <section id="news" class="pt60 pb50">
+      <div class="container pl5 pr5">
+        <div class="tac cf mb50">
+          <div class="fwb ttu fs2 fs1-sm c0">Tin tức - sự kiện</div>
+          <div class="ttu fs1 fs09-md lh25 c0">
+            Tin tức, sự kiện của hội thảo
+          </div>
+        </div>
+        <div id="newContent" class="gap20 df jcsb fww"></div>
+        <a
+          href="#"
+          class="buttonCustomWithBorder bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 mla mra mt50 db"
+        >
+          Xem thêm
+        </a>
+      </div>
+    </section>
+
+    <section class="bgGradient pr pb50 pt60" id="instruct">
+      <div class="container pl5 pr5">
+        <div class="tac cf mb25">
+          <div class="fwb ttu fs2 fs1-sm">Nhà tài trợ hội thảo</div>
+          <div class="ttu fs1 fs09-md lh25">Nhà tài trợ của hội thảo</div>
+        </div>
+        <div id="sponsorship" class="df jcsb aic gap50 fww"></div>
+      </div>
+    </section>
+    <section id="map" class="pt60 pb61">
+      <div class="container pl5 pr5">
+        <div class="w1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4666.059223525973!2d105.79308217611602!3d20.989158180650296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adb29ed54487%3A0xbe22035eae87b5d7!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBIw6AgTuG7mWk!5e1!3m2!1svi!2s!4v1729740242558!5m2!1svi!2s"
+            width="100%"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="brtl25 brtr25 brbl25"
+          ></iframe>
+          <div class="tac cf mt50">
+            <div class="fwb ttu fs2 fs1-sm colorGrapeColor">
+              Đăng ký nhận thông báo
+            </div>
+            <div class="df mt25">
+              <input type="text" placeholder="Email" class="w1 mr25 bb1 on" />
+              <a
+                id="emailInputSubmit"
+                class="buttonCustomWithoutBorder wsn bw1 bss wfc pl25 pt15 pr25 pb15 cf fwb fs13p brtl25 brtr25 brbl25 bn ttc"
+                >Nhận thông báo</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <footer class="bgGradient pt60 pb60 pr cf">
-      <div class="container">
-        <div id="footerItem" class="df jcsb">
-
+      <div class="container pl5 pr5">
+        <div class="df fww gap50">
+          <a href="#" class="wh80"
+            ><img src="./imgs/logo3.png" alt="logoFooter"
+          /></a>
+          <div id="footerItem" class="df gap50 fww"></div>
         </div>
-        <div class="fs12p">Copy right &copy;. All rights reserved</div>
+        <div class="fs12p tac mt50">Copy right &copy;. All rights reserved</div>
       </div>
     </footer>
+    <script type="module" src="./js/render.js"></script>
     <script type="module" src="./js/main.js"></script>
   </body>
 </html>
