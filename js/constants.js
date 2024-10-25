@@ -30,12 +30,12 @@ export var bannerDivBottomList = [
 ];
 
 export var speakerImageList = [
-  { img: "./imgs/introduce1.webp", alt: "speaker1" },
-  { img: "./imgs/introduce1.webp", alt: "speaker2" },
-  { img: "./imgs/introduce1.webp", alt: "speaker3" },
-  { img: "./imgs/introduce1.webp", alt: "speaker4" },
-  { img: "./imgs/introduce1.webp", alt: "speaker5" },
-  { img: "./imgs/introduce1.webp", alt: "speaker6" },
+  { img: "./imgs/introduce1.webp", alt: "speaker1", border: 'brtl30 brtr30 brbl30' },
+  { img: "./imgs/introduce1.webp", alt: "speaker2", border: 'brtl30 brtr30 ' },
+  { img: "./imgs/introduce1.webp", alt: "speaker3", border: 'brtl30 brtr30 brbr30 ' },
+  { img: "./imgs/introduce1.webp", alt: "speaker4", border: 'brtl30 brbr30 brbl30 ' },
+  { img: "./imgs/introduce1.webp", alt: "speaker5", border: 'brbr30 brbl30 ' },
+  { img: "./imgs/introduce1.webp", alt: "speaker6", border: 'brbr30 brtr30 brbl30' },
 ];
 
 export var instructList = [

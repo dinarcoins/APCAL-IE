@@ -21,20 +21,19 @@ document
 
 document.addEventListener("DOMContentLoaded", () => {
   openMenuBtn.addEventListener("click", () => {
-    menuContainer.classList.add("active");
+    menuContainer.style.right = 0;
   });
   closeMenuBtn.addEventListener("click", () => {
-    menuContainer.classList.remove("active");
+    menuContainer.style.right = "-100%";
   });
 });
 
 imageSpeakercontainer.innerHTML = speakerImageList
   .map((item) => {
     return `
-    <div class="image-item bsbb">
-      <img src="${item.img}" alt="${item.alt}" class="brtl30 brtr30 brbl30 w1 db ha">
+    <div class="image-item ml5 mr5 mt5 mb5 bsbb mb50-md">
+      <img src="${item.img}" alt="${item.alt}" class="${item.border} w1 db ha">
     </div>
-
   `;
   })
   .join("");

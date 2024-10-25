@@ -24,9 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function handleScroll() {
     if (window.scrollY > 50) {
-      header.classList.add("fixed");
+      header.style.background = "#fff";
     } else {
-      header.classList.remove("fixed");
+      header.style.background = "transparent";
     }
   }
 
@@ -105,7 +105,7 @@ links.forEach((link) => {
   instructItemContainer.innerHTML = instructList
     .map((item) => {
       return `
-    <div class="w1 w30-sm brtl25 brtr25 brbl25 bgcf pl35 pr35 pt35 pb35 pt10-xs pb10-xs">
+    <div class="w1 w30-sm brtl25 brtr25 brbl25 bgcf pl35 pr35 pt35 pb35 pt10-xs pb10-xs mb15">
       <i class="${item.icon} fs2 fs1-xs colorGrapeColor mb15"></i>
       <div class="fs1 fs1-xs fwb mb15">${item.title}</div>
       <div class="fs1 fs09-sm ">${item.text}</div>
@@ -118,7 +118,7 @@ links.forEach((link) => {
 function renderProgramNavigationTabs() {
   programNavigationTitleContainer.innerHTML = programNavigationData
     .map((tab, index) => {
-      return `<div class="tab-button cpi wfc fs15 fs1-sm" data-index="${index}">${tab.tabName}</div>`;
+      return `<div class="tab-button bbw2 bbss bbcf pb10 cpi wfc fs15 fs1-sm" data-index="${index}">${tab.tabName}</div>`;
     })
     .join("");
 
@@ -138,11 +138,11 @@ function renderProgramNavigationTabContent(tabIndex) {
     .map((item) => {
       return `
           <div class="tab-item w1 pl50 pt50 pr50 pb50 brtl30 brtr30 brbl30 df fww mb25 pt15-xs pb15-xs pr5-xs pl5-xs">
-            <div class="df gap10">
-              <div class="mr50 mr0-xs fs15 fs09-xs fwb">${item.date}</div>
+            <div class="df">
+              <div class="mr50 mr0-xs fs15 fs09-xs fwb">${item.date} - </div>
               <div class="fs15 fs09-xs fwb ">${item.title}</div>
             </div>
-            <div class="additional-description fs10 hiddenDecs mt25">${item.decs}</div>
+            <div class="additional-description fs10 dn mt25">${item.decs}</div>
           </div>
         `;
     })
@@ -155,11 +155,15 @@ function renderProgramNavigationTabContent(tabIndex) {
   document.querySelectorAll(".tab-item").forEach((item) => {
     item.addEventListener("click", function () {
       document.querySelectorAll(".additional-description").forEach((desc) => {
-        desc.classList.add("hiddenDecs");
+        desc.style.display = "none"
+          ? (desc.style.display = "none")
+          : (desc.style.display = "block");
       });
 
       const description = this.querySelector(".additional-description");
-      description.classList.toggle("hiddenDecs");
+      description.style.display = "none"
+        ? (description.style.display = "block")
+        : (description.style.display = "none");
     });
   });
 }
@@ -170,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   newContentContainer.innerHTML = newsItemList
     .map((item, index) => {
       return `
-    <a href="#" class="w30 w1-sm newItem">
+    <a href="#" class="w30 w1-sm newItem mb15">
       <img src="${item.img}" alt="newitem1" class="${
         index === 0 && `brtl25 brtr25 brbl25`
       } ${index === 1 && `brtl25 brtr25`} ${
@@ -206,14 +210,14 @@ function updateVisibleItems() {
   if (window.innerWidth <= 768) {
     children.forEach((child, index) => {
       if (index < 3) {
-        child.classList.add("show");
+        child.style.display = "flex";
       } else {
-        child.classList.remove("show");
+        child.style.display = "none";
       }
     });
   } else {
     children.forEach((child) => {
-      child.classList.add("show");
+      child.style.display = "flex";
     });
   }
 }

@@ -663,6 +663,7 @@ progress[value].bra10:: -moz-progress-value { border-radius: 10px; }
 .pr50, .plr50, .pa50 { padding-right: 50px; }
 .pt50, .ptb50, .pa50 { padding-top: 50px; }
 .pt60, .ptb60, .pa60 { padding-top: 60px; }
+.pt180, .ptb180, .pa180 { padding-top: 180px; }
 .pb50, .ptb50, .pa50 { padding-bottom: 50px; }
 .pb60, .ptb60, .pa60 { padding-bottom: 60px; }
 .pt2e { padding-top: 2em; }
@@ -1230,6 +1231,7 @@ html:not(.diĐộng) .oyahi, html:not(.diĐộng) .oxahi { overflow: hidden; }
 .bw7 { border-width: 7px; }
 .bw10 { border-width: 10px; }
 .bss, .bssh:hover, .b1sb, .b2fr, .b1sd { border-style: solid; }
+.bbss, .bbssh:hover { border-bottom-style: solid; }
 .bsdo { border-style: dotted; }
 .bsdoi { border-style: dotted!important; }
 .bsda { border-style: dashed; }
@@ -1238,6 +1240,7 @@ html:not(.diĐộng) .oyahi, html:not(.diĐộng) .oxahi { overflow: hidden; }
 .bsdb { border-style: double; }
 .bc0 { border-color: #000; }
 .bc0ed { border-color: transparent #eee #ddd; }
+.bbcf { border-bottom-color:  #fff; }
 .bc1ed { border-color: #f6f6f6 #eee #ddd; }
 .bcb1 { border-color: #718BB7; }
 .bca { border-color: #aaa; }
@@ -2759,6 +2762,7 @@ input.c3p:-moz-placeholder {
 	.w50-md { width: 50%; }
 	.pa-md { position: absolute; }
 	.pai-md { position: absolute!important; }
+	.mb50-md { margin-bottom: 50px;}
 }
 @media (min-width: 1200px) {
 	.w300-lg { width: 300px; }
