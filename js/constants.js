@@ -1,8 +1,32 @@
 export var bannerDivBottomList = [
-  { icon: "fa-solid fa-microphone", number: "03", text: "Ngày làm việc" },
-  { icon: "fa-solid fa-stamp", number: "20+", text: "diễn giả" },
-  { icon: "fa-solid fa-map-location-dot", number: "10+", text: "quốc gia" },
-  { icon: "fa-solid fa-share-nodes", number: "07", text: "chủ đề" },
+  {
+    icon: "fa-solid fa-microphone",
+    number: "0",
+    text: "Ngày làm việc",
+    type: "counters",
+    dataTarget: "3",
+  },
+  {
+    icon: "fa-solid fa-stamp",
+    number: "0+",
+    text: "diễn giả",
+    type: "countersPlus",
+    dataTarget: "20",
+  },
+  {
+    icon: "fa-solid fa-map-location-dot",
+    number: "0+",
+    text: "quốc gia",
+    type: "countersPlus",
+    dataTarget: "10",
+  },
+  {
+    icon: "fa-solid fa-share-nodes",
+    number: "0",
+    text: "chủ đề",
+    type: "counters",
+    dataTarget: "7",
+  },
 ];
 
 export var speakerImageList = [

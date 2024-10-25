@@ -31,46 +31,67 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   window.addEventListener("scroll", handleScroll);
-});
-
-bannerDivBottomContainer.innerHTML = bannerDivBottomList
-  .map((item) => {
-    return `
-      <div class="df aic col-xs-6 mb15">
+  bannerDivBottomContainer.innerHTML = bannerDivBottomList
+    .map((item) => {
+      return `
+      <div class="df aic mb15">
         <i class="${item.icon} fs4 fs2-md colorGrapeColor"></i>
         <div class="ml25">
-          <div class="fs3 fwb fs1-md">${item.number}</div>
-          <div class="fs2 fs09-md ttc">${item.text}</div>
+          <div data-target="${item.dataTarget}" class="fs2 fwb fs1-md ${
+        item.counters ? "counter" : "counterPlus"
+      }">${item.number}</div>
+          <div class="fs1 fs09-md ttc">${item.text}</div>
         </div>
       </div>
-  `;
-  })
-  .join("");
+    `;
+    })
+    .join("");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const links = document.querySelectorAll('a[href^="#"]');
+  function animateCounter(element, endTime, suffix = "") {
+    const target = +element.getAttribute("data-target");
+    const increment = target / (endTime / 16);
 
-  links.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
+    const update = () => {
+      const current = +element.innerText.replace(suffix, "");
 
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        window.scrollTo({
-          top: targetElement.offsetTop,
-          behavior: "smooth",
-        });
+      if (current < target) {
+        element.innerText = Math.ceil(current + increment) + suffix;
+        setTimeout(update, 16);
+      } else {
+        element.innerText = target + suffix;
       }
-    });
-  });
+    };
+    update();
+  }
+
+  document
+    .querySelectorAll(".counter")
+    .forEach((counter) => animateCounter(counter, 1500));
+  document
+    .querySelectorAll(".counterPlus")
+    .forEach((counter) => animateCounter(counter, 2000, "+"));
 });
 
+const links = document.querySelectorAll('a[href^="#"]');
 
-footerItemContainer.innerHTML = footerItemList
-  .map((item, index) => {
-    return `
+links.forEach((link) => {
+  link.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const targetId = this.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      window.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: "smooth",
+      });
+    }
+  });
+
+  footerItemContainer.innerHTML = footerItemList
+    .map((item, index) => {
+      return `
       <div class="df fdc w1-sm">
         <div class="fwb lh25">${item.text}</div>
        <a href="${item.href1}" class="lh25">${item.text1}</a>
@@ -78,25 +99,26 @@ footerItemContainer.innerHTML = footerItemList
        <a href="${item.href3}" class="lh25">${item.text3}</a>
       </div>
   `;
-  })
-  .join("");
+    })
+    .join("");
 
-instructItemContainer.innerHTML = instructList
-  .map((item) => {
-    return `
+  instructItemContainer.innerHTML = instructList
+    .map((item) => {
+      return `
     <div class="w1 w30-sm brtl25 brtr25 brbl25 bgcf pl35 pr35 pt35 pb35 pt10-xs pb10-xs">
       <i class="${item.icon} fs2 fs1-xs colorGrapeColor mb15"></i>
-      <div class="fs12 fs1-xs fwb mb15">${item.title}</div>
-      <div class="fs12 fs09-sm ">${item.text}</div>
+      <div class="fs1 fs1-xs fwb mb15">${item.title}</div>
+      <div class="fs1 fs09-sm ">${item.text}</div>
     </div>
     `;
-  })
-  .join("");
+    })
+    .join("");
+});
 
 function renderProgramNavigationTabs() {
   programNavigationTitleContainer.innerHTML = programNavigationData
     .map((tab, index) => {
-      return `<div class="tab-button cpi wfc fs2 fs1-sm" data-index="${index}">${tab.tabName}</div>`;
+      return `<div class="tab-button cpi wfc fs15 fs1-sm" data-index="${index}">${tab.tabName}</div>`;
     })
     .join("");
 
@@ -148,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
   newContentContainer.innerHTML = newsItemList
     .map((item, index) => {
       return `
-    <div class="w30 w1-sm newItem">
+    <a href="#" class="w30 w1-sm newItem">
       <img src="${item.img}" alt="newitem1" class="${
         index === 0 && `brtl25 brtr25 brbl25`
       } ${index === 1 && `brtl25 brtr25`} ${
@@ -156,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } mb25 w1">
       <div class="newItemTitle fs12 fs1-md fwb mb15 lh16">${item.title}</div>
       <div class="fs10 fwn lh16 fs09-md">${item.desc}</div>
-    </div>
+    </a>
     `;
     })
     .join("");
@@ -168,10 +190,9 @@ function renderSponsorship() {
   sponsorshipContainer.innerHTML = sponsorshipList
     .map(
       (item) => `
-
-      <div class="sponsorshipItem w20 df aic jcc">
-      <img src="${item.img}" alt="${item.alt}" class="w1 w50-sm" />
-    </div>
+      <a href="#" class="sponsorshipItem w20 df aic jcc">
+        <img src="${item.img}" alt="${item.alt}" class="w1 w50-sm" />
+      </a>
      `
     )
     .join("");
@@ -201,7 +222,8 @@ window.addEventListener("resize", updateVisibleItems);
 
 renderSponsorship();
 
-
-document.getElementById("emailInputSubmit").addEventListener("click", function() {
-  alert("Đã nhận được thông tin email!");
-});
+document
+  .getElementById("emailInputSubmit")
+  .addEventListener("click", function () {
+    alert("Đã nhận được thông tin email!");
+  });
