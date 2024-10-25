@@ -66,10 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document
     .querySelectorAll(".counter")
-    .forEach((counter) => animateCounter(counter, 1500));
+    .forEach((counter) => animateCounter(counter, 3500));
   document
     .querySelectorAll(".counterPlus")
-    .forEach((counter) => animateCounter(counter, 2000, "+"));
+    .forEach((counter) => animateCounter(counter, 5000, "+"));
 });
 
 const links = document.querySelectorAll('a[href^="#"]');
