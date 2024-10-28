@@ -2747,7 +2747,7 @@ input.c3p:-moz-placeholder {
 	.pb249-sm { padding-bottom: 37.5%; }
 	.pb43-sm { padding-bottom: 75%; }
 	.pf-sm { position: fixed; }
-	.prt0-sm { position: relative; top: 0; transform: none; }
+	.prt0-sm { position: relative; }
 	.pa-sm { position: absolute; }
 }
 @media (min-width: 992px) {
